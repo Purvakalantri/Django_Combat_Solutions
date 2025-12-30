@@ -34,6 +34,12 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'rest_framework',
+    # 'django.contrib.sessions'
+]
+
+MIDDLEWARE=[
+    # "django.contrib.sessions.middleware.SessionMiddleware",
+    # "django.contrib.auth.middleware.AuthenticationMiddleware"
 ]
 
 ROOT_URLCONF = 'backend.urls'

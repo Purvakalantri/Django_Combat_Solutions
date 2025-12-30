@@ -1,7 +1,9 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 
-class UserSerializer(serializers.ModelSerializer):
+
+
+class CreateUser(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
 
     # print("saurabh", serializers.CharField)
@@ -18,5 +20,11 @@ class UserSerializer(serializers.ModelSerializer):
         if not value.endswith("@gmail.com"):
             raise serializers.ValidationError("Email is invalid , provide valid email")
         return value
+
+
+class LoginSerializer(serializers.Serializer):
+    username=serializers.CharField(max_length=10)
+    password=serializers.CharField(write_only=True)
+
         
     
