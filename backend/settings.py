@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'rest_framework',
     # 'django.contrib.sessions'
+    'src.complaints'
 ]
 
 MIDDLEWARE=[
