@@ -35,8 +35,6 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'rest_framework',
-    # 'django.contrib.sessions'
-    # 'src.complaints',
     'src.complaints.apps.ComplaintsConfig',
     'rest_framework.authtoken'
     

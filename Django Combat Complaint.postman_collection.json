@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "fcda4266-875b-4ead-b873-5777f31c3050",
+		"name": "Django Combat Complaint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39895375"
+	},
+	"item": [
+		{
+			"name": "create_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"sam\",\r\n    \"first_name\":\"sam1\",\r\n    \"last_name\":\"singh\",\r\n    \"email\":\"sam@gmail.com\",\r\n    \"password\":\"sam@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/create_user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"sam\",\r\n    \"password\": \"sam@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user_login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user_login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_complaint",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMCwiaWF0IjoxNzY3MTY4MTE1LCJleHAiOjE3NjcxNjg3MTV9.rPbBAnqlEPN9JaENN9Pc_L0wa8d-bXVLu7shVnUaXjU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Water Leakage\",\r\n    \"description\": \"there is water Leakage in out society near the A building on the grounf floor and there is high amount of wastage and it should be addressed immediately.\",\r\n    \"status\":\"pending\",\r\n    \"priority\":\"high\"\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/create_complaint",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create_complaint"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_complaint",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMCwiaWF0IjoxNzY3MTY4MTE1LCJleHAiOjE3NjcxNjg3MTV9.rPbBAnqlEPN9JaENN9Pc_L0wa8d-bXVLu7shVnUaXjU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Water Leakage\",\r\n    \"description\": \"there is water Leakage in out society near the A building on the grounf floor and there is high amount of wastage and it should be addressed immediately.\",\r\n    \"status\":\"pending\",\r\n    \"priority\":\"high\"\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/create_complaint",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create_complaint"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_complaint_status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMCwiaWF0IjoxNzY3MTY4MTE1LCJleHAiOjE3NjcxNjg3MTV9.rPbBAnqlEPN9JaENN9Pc_L0wa8d-bXVLu7shVnUaXjU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Water Leakage\",\r\n    \"description\": \"there is water Leakage in out society near the A building on the grounf floor and there is high amount of wastage and it should be addressed immediately.\",\r\n    \"status\":\"pending\",\r\n    \"priority\":\"high\"\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/create_complaint",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create_complaint"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
