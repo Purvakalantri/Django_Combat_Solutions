@@ -5,15 +5,14 @@ from django.contrib.auth.models import User
 
 class CreateUser(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
-
-    # print("saurabh", serializers.CharField)
+    
     first_name = serializers.CharField(max_length=10)
-    last_name = serializers.CharField(max_length=10)  #for having max_length
-    # email = serializers.EmailField()
+    last_name = serializers.CharField(max_length=10)
 
     class Meta:
         model = User
         fields = ['username', 'first_name', 'last_name', 'email', 'password']
+        print("python reaches login serializer")
 
     def validate_email(self, value):
         print("purva came here")
@@ -23,6 +22,7 @@ class CreateUser(serializers.ModelSerializer):
 
 
 class LoginSerializer(serializers.Serializer):
+    print("python reaches login serializer")
     username=serializers.CharField(max_length=10)
     password=serializers.CharField(write_only=True)
 
