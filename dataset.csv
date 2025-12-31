@@ -1,0 +1,102 @@
+description,priority
+Payment deducted from account but order was not created,HIGH
+Order marked as delivered but customer did not receive the package,HIGH
+Wrong product delivered instead of the ordered item,HIGH
+Refund not initiated even after successful order cancellation,HIGH
+Customer charged twice for the same order,HIGH
+Account locked due to suspicious login activity,HIGH
+Prime delivery not completed on promised date,HIGH
+Order stuck in processing state for more than seventy two hours,HIGH
+Incorrect invoice generated with wrong tax details,HIGH
+Unauthorized order placed from customer account,HIGH
+Replacement not processed for damaged product,HIGH
+Suspected counterfeit product delivered,HIGH
+Refund credited to incorrect payment method,HIGH
+Gift card balance deducted without redemption,HIGH
+Refund pending after cash on delivery return,HIGH
+Order automatically cancelled without user action,HIGH
+Full amount charged instead of EMI installment,HIGH
+Digital product license key is invalid,HIGH
+Wallet balance missing after system update,HIGH
+Delivery attempt marked without actual delivery,HIGH
+Order delivery delayed beyond promised date,MEDIUM
+Product packaging damaged but item intact,MEDIUM
+Search results showing irrelevant products,MEDIUM
+Checkout page loading slowly during payment,MEDIUM
+Seller not responding to customer messages,MEDIUM
+One item missing from multi item order,MEDIUM
+Return pickup rescheduled multiple times,MEDIUM
+Product images differ from actual product,MEDIUM
+Estimated delivery date shown incorrectly,MEDIUM
+Wishlist items disappearing intermittently,MEDIUM
+Order tracking information not updating,MEDIUM
+Product price changed after adding to cart,MEDIUM
+Coupon applied but discount not reflected,MEDIUM
+Unable to submit product review,MEDIUM
+Error while downloading order invoice,MEDIUM
+Seller ratings not visible on product page,MEDIUM
+Mobile application crashes during checkout,MEDIUM
+Updated delivery address not applied to order,MEDIUM
+Order confirmation email not received,MEDIUM
+Replacement product delivery delayed,MEDIUM
+Order split into multiple shipments without notice,MEDIUM
+Customer support chat disconnects frequently,MEDIUM
+EMI option unavailable for eligible product,MEDIUM
+Order status notifications received late,MEDIUM
+Subscription renewal reminder not sent,MEDIUM
+Minor spelling error in product description,LOW
+Image zoom feature not working smoothly,LOW
+User interface inconsistency in dark mode,LOW
+Sorting filters reset automatically,LOW
+Notification sound not playing in app,LOW
+Recently viewed items not updating,LOW
+Order history page loading slowly,LOW
+Product recommendations not relevant,LOW
+Language preference resets automatically,LOW
+Promotional banner overlapping text,LOW
+Minor lag while scrolling product list,LOW
+Unable to rename wishlist,LOW
+Product comparison page layout issue,LOW
+Star rating alignment issue,LOW
+Inconsistent font size across screens,LOW
+Unable to edit address nickname,LOW
+Formatting issue in product question answer section,LOW
+Category breadcrumb navigation incorrect,LOW
+Promotional banner cannot be dismissed,LOW
+Delay in updating email preferences,LOW
+Minor animation stutter in application,LOW
+Back button behavior inconsistent,LOW
+Cart icon badge count briefly incorrect,LOW
+Search suggestions loading slowly,LOW
+Order filter options missing,LOW
+Theme color mismatch across pages,LOW
+Layout overlap on small screen devices,LOW
+Tooltip text getting truncated,LOW
+Keyboard overlapping input fields,LOW
+Footer links misaligned,LOW
+Currency symbol alignment issue,LOW
+Product badge colors inconsistent,LOW
+Minor typo in frequently asked questions,LOW
+Accessibility contrast improvement suggestion,LOW
+Delay in user interface feedback animation,LOW
+Order page refreshes unexpectedly,LOW
+Address autofill not accurate,LOW
+Search filter user interface lag,LOW
+Payment icons misaligned on checkout page,LOW
+User logged out automatically without action,LOW
+Notification badge updates slowly,LOW
+Wishlist synchronization delayed across devices,LOW
+Help page navigation links broken,LOW
+Orders not sorting correctly in order history,LOW
+Chat support icon overlapping content,LOW
+Product reviews not sorted correctly,LOW
+Settings page loading slowly,LOW
+Tooltip missing for promotional codes,LOW
+Profile picture upload taking long time,LOW
+Order timeline display incorrect,LOW
+Application cache not clearing properly,LOW
+Text alignment inconsistent across pages,LOW
+Minor user interface flicker observed,LOW
+Page scroll position resets unexpectedly,LOW
+Unable to rate customer support chat,LOW
+

@@ -4,7 +4,7 @@ from .models import Complaint
 class CreateComplaints(serializers.ModelSerializer):
 
     title= serializers.CharField(max_length=100)
-    description=serializers.CharField(min_length=100, max_length=400)
+    description=serializers.CharField(min_length=50, max_length=400)
     # complaint_id=serializers.IntegerField(source='id', read_only=True)
     
 

@@ -8,6 +8,7 @@ from rest_framework.permissions import IsAuthenticated
 import jwt
 from django.conf import settings
 from rest_framework.exceptions import AuthenticationFailed
+from .ml.predictor import predict_priority
 
 
 def verify_jwt(token):
@@ -68,13 +69,13 @@ def create_complaint(request):
 
         #get the user first from the user id
         user = User.objects.get(id=user_id)
-        print("pbk", user)
+        predicted_priority = predict_priority(request.data.get('description'))
 
         complaint= Complaint.objects.create(
             user=user,
             title=request.data.get('title'),
             description=request.data.get('description'),
-            priority=request.data.get('priority'),
+            priority=predicted_priority,
         )
 
         return Response(
@@ -189,5 +190,5 @@ def update_complaint_status(request):
 # get complaint based on the user name- done
 # Update complaint status api - done
 # Django signals to update the status automatically - done
-# Machine Learning - Complaints data sets to update the priority
+# Machine Learning - Complaints data sets to update the priority - done
 # Langgraph and langchain
