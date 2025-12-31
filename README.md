@@ -265,3 +265,75 @@ The complaint status update process is handled automatically in the background u
 
 This approach ensures efficient, asynchronous processing of complaint status updates without affecting API response time.
 
+## Machine Learning Model – Priority Prediction Explanation
+
+This project uses **scikit-learn** and **joblib** to build, train, and deploy a machine learning model that predicts the **priority of a complaint** based only on the **complaint description**, as required by the assignment.
+
+---
+
+### Google Colab Notebook
+
+The complete model training and experimentation were performed in Google Colab.
+
+🔗 **Colab Link:**  
+https://colab.research.google.com/drive/1SbYmYGoO1EWiqkZsuKd-wEmQ3JNAeGSg#scrollTo=ytWEGnP77eZy
+
+---
+
+---
+
+### Libraries Used
+
+- **scikit-learn** – for text vectorization, data splitting, and model training  
+- **joblib** – for saving and loading the trained model and vectorizer  
+
+---
+
+### Text Vectorization and Dataset Split
+
+- The complaint description text is converted into numerical form using **text vectorization**.
+- Vectorization embeds the text into tokens so that it can be understood by the machine learning model.
+- The dataset is then split into **training data** and **testing data** using a train-test split.
+- This allows the model to be trained on one part of the data and evaluated on unseen data.
+
+---
+
+### Priority Label Mapping
+
+To enable numerical processing, complaint priorities are mapped as follows:
+
+- **HIGH → 1**
+- **MEDIUM → 2**
+- **LOW → 3**
+
+- This mapped value is referred to as the **priority label**.
+- Vectorization and model training are performed using these numerical labels.
+
+---
+
+### Model Training
+
+- The model used is **LogisticRegression**, which falls under **linear models** in scikit-learn.
+- The maximum number of training iterations is set to **1000**.
+- Although the number of iterations can be increased, **1000 iterations are sufficient** for this assignment.
+- The dataset used contains **100 rows**, keeping the scope limited as per assignment requirements.
+
+---
+
+### Model Saving and Backend Integration
+
+- After successful training and testing:
+  - The **vectorizer**
+  - The **trained prediction model**
+  
+  are saved using **joblib**.
+
+- These saved files are then loaded into the **Django backend**.
+- During runtime, the backend:
+  - Accepts the complaint description
+  - Vectorizes the input text
+  - Predicts the priority using the trained model
+
+
+This approach ensures efficient machine learning–based priority prediction while keeping the backend lightweight and focused only on inference.
+
