@@ -229,3 +229,39 @@ Bearer Token (JWT)
 
 - All protected APIs require a valid JWT token
 - Tested using Postman
+
+## Background Status Update Explanation
+
+The complaint status update process is handled automatically in the background using **Django signals** and **threading** to ensure a smooth and non-blocking user experience.
+
+### How It Works
+
+- Whenever a complaint is saved in the database, a **Django `post_save` signal** is triggered.
+- This signal listens for any save operation on the Complaint model (both create and update).
+- As soon as the complaint is saved, the system immediately updates the complaint status to **`in_progress`**.
+
+### Asynchronous Status Update Using Threading
+
+- After updating the status to `in_progress`, a **separate thread** is created using Python threading.
+- This thread runs as a background process and updates the complaint status to **`resolved`** after a defined delay.
+- Threading is used to ensure that the user does **not have to wait** for the delay to complete in order to receive the complaint ID or API response.
+- This makes the status update process **asynchronous**, improving performance and user experience.
+
+### Preventing Infinite Signal Loops
+
+- Since updating the model inside a `post_save` signal will trigger the signal again, a safety check is required.
+- The `created` flag provided by Django signals is used to identify whether the object is newly created.
+- If `created` is `True`, the background update logic is executed.
+- If `created` is `False`, the signal logic is skipped.
+- This prevents **re-execution of the signal** and avoids an **infinite loop** caused by repeated `post_save` triggers.
+
+### Summary
+
+- `post_save` signal listens for complaint save events
+- Status is immediately set to `in_progress`
+- Background thread updates status to `resolved`
+- Threading ensures non-blocking execution
+- Signal flags prevent infinite loops
+
+This approach ensures efficient, asynchronous processing of complaint status updates without affecting API response time.
+
